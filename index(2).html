@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Dani Rueda — Window Painting, DC Metro Area</title>
+<meta name="description" content="Hand-painted seasonal storefront windows for small businesses across the DC metro area.">
+
+<link rel="canonical" href="https://danirueda.com/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://danirueda.com/">
+<meta property="og:title" content="Dani Rueda — Window Painting">
+<meta property="og:description" content="Hand-painted seasonal storefront windows. DC metro area.">
+<meta name="theme-color" content="#FFFFFF">
+<meta property="og:image" content="https://danirueda.com/img/mural-cheesetique-ghosts.webp">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://danirueda.com/img/mural-cheesetique-ghosts.webp">
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%235B8FB4'/><rect x='7' y='7' width='18' height='18' fill='none' stroke='white' stroke-width='2'/></svg>">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Parisienne&family=Schibsted+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --ground: #FFFFFF;
+    --ink:    #4A4038;   /* espresso */
+    --soft:   #7D7268;
+    --faint:  #AFA49A;
+    --accent: #5B8FB4;   /* soft blue */
+    --hair:   #E6E1DB;
+
+    --edge:  clamp(1.25rem, 5vw, 4rem);
+    --col:   88rem;
+  }
+
+  *, *::before, *::after{ box-sizing: border-box; }
+
+  html{ -webkit-text-size-adjust: 100%; }
+
+  body{
+    margin: 0;
+    background: var(--ground);
+    color: var(--ink);
+    font-family: "Schibsted Grotesk", system-ui, sans-serif;
+    font-size: 1rem;
+    line-height: 1.45;
+    -webkit-font-smoothing: antialiased;
+    font-feature-settings: "tnum";
+  }
+
+  img{ display: block; width: 100%; height: auto; }
+  a{ color: inherit; text-decoration: none; }
+  ::selection{ background: var(--accent); color: #fff; }
+  :focus-visible{ outline: 2px solid var(--accent); outline-offset: 4px; }
+
+  .page{ max-width: var(--col); margin: 0 auto; padding: 0 var(--edge); }
+
+  /* ——— masthead: name left, facts right, one hairline under ——— */
+  .masthead{
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: start;
+    gap: 2rem;
+    padding: clamp(5rem, 15vh, 11rem) 0 clamp(3rem, 9vh, 6rem);
+  }
+
+  .name{
+    margin: 0;
+    color: var(--accent);
+    font-family: "Parisienne", cursive;
+    font-size: clamp(2.6rem, 8vw, 5rem);
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 1;
+  }
+
+  /* section label, sits just above the grid */
+  .intro{
+    margin: clamp(3rem, 9vw, 6rem) 0 .9rem;
+  }
+
+  .headline{
+    margin: .5rem 0 0;
+    font-size: clamp(.85rem, 1.6vw, 1.05rem);
+    font-weight: 600;
+    letter-spacing: .16em;
+    text-indent: .16em;
+    line-height: 1;
+    text-transform: uppercase;
+    color: var(--ink);
+  }
+
+  .role{
+    font-size: .7rem;
+    font-weight: 600;
+    letter-spacing: .26em;
+    text-indent: .26em;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+
+  .facts{
+    text-align: right;
+    font-size: .78rem;
+    line-height: 1.75;
+    color: var(--soft);
+  }
+  .facts a{ border-bottom: 1px solid var(--hair); }
+  .facts a:hover{ color: var(--accent); border-color: var(--accent); }
+
+  /* ——— work ——— */
+  .work{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0,1fr));
+    gap: clamp(2rem, 4vw, 3.25rem) clamp(1rem, 2.5vw, 1.75rem);
+    padding-bottom: clamp(3rem, 8vw, 5.5rem);
+  }
+
+  figure{ margin: 0; }
+
+  figure img{
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    background: #EDE9E4;
+  }
+
+  figcaption{
+    display: flex;
+    align-items: baseline;
+    gap: .75rem;
+    margin-top: .8rem;
+  }
+  figcaption b{
+    font-size: .8rem;
+    font-weight: 500;
+    color: var(--ink);
+  }
+  figcaption .client{
+    margin-left: auto;
+    text-align: right;
+    font-size: .62rem;
+    font-weight: 400;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--faint);
+    white-space: nowrap;
+  }
+
+  /* ——— footer ——— */
+  .foot{
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem 2rem;
+    align-items: baseline;
+    padding: 1.1rem 0 3.5rem;
+    border-top: 1px solid var(--ink);
+    font-size: .68rem;
+    letter-spacing: .09em;
+    text-transform: uppercase;
+    color: var(--faint);
+  }
+  .foot a:hover{ color: var(--accent); }
+  .foot .end{ margin-left: auto; }
+
+  @media (max-width: 52rem){
+    .masthead{ grid-template-columns: 1fr; align-items: start; gap: 1.25rem; }
+    .facts{ text-align: left; }
+    .work{ grid-template-columns: repeat(2, minmax(0,1fr)); }
+  }
+  @media (max-width: 32rem){
+    .work{ grid-template-columns: 1fr; }
+    figcaption .client{ white-space: normal; }
+  }
+</style>
+</head>
+
+<body>
+<div class="page">
+
+  <header class="masthead">
+    <div>
+      <h1 class="name">Dani Rueda</h1>
+      <p class="headline">Painting</p>
+    </div>
+    <p class="facts">
+      <a href="mailto:daniruedaart@gmail.com">daniruedaart@gmail.com</a><br>
+      DC metro area
+    </p>
+  </header>
+
+  <p class="intro"><span class="role">Window Murals</span></p>
+
+  <main class="work">
+
+    <figure>
+      <img src="img/mural-see-school-year-clearly.webp" alt="Optical shop window painted with a banner reading See The School Year Clearly above three children in glasses walking toward a yellow school bus." loading="lazy">
+      <figcaption><b>See the School Year Clearly</b><span class="client">New Era Eyecare</span></figcaption>
+    </figure>
+
+    <figure>
+      <img src="img/mural-cheesetique-ghosts.webp" alt="Cheesetique storefront windows painted with white ghosts trailing curls of smoke." loading="lazy">
+      <figcaption><b>Spooky Ghosts</b><span class="client">Cheesetique</span></figcaption>
+    </figure>
+
+    <figure>
+      <img src="img/mural-santa-optometrists.webp" alt="Optometrist's window painted with three bearded Santa heads, each wearing a different pair of glasses." loading="lazy">
+      <figcaption><b>Santa’s Official Optician</b><span class="client">New Era Eyecare</span></figcaption>
+    </figure>
+
+    <figure>
+      <img src="img/mural-del-ray-snowdrifts-detail.webp" alt="Del Ray Pizzeria's window painted with drifted snow banking up the glass beneath scattered white snowflakes." loading="lazy">
+      <figcaption><b>Snowdrifts</b><span class="client">Del Ray Pizzeria</span></figcaption>
+    </figure>
+
+    <figure>
+      <img src="img/mural-love-at-first-sight.webp" alt="Optical shop window painted with two pink hearts containing lashed eyes, arrows through them, above red script reading Love at First Sight." loading="lazy">
+      <figcaption><b>Love at First Sight</b><span class="client">New Era Eyecare</span></figcaption>
+    </figure>
+
+    <figure>
+      <img src="img/mural-st-elmos-dalmatians.webp" alt="Corner window of St. Elmo's Coffee Pub painted with two dalmatians in red sunglasses flanking the shop's roundel logo." loading="lazy">
+      <figcaption><b>Dog Fest Dalmatians</b><span class="client">St. Elmo’s Coffee Pub</span></figcaption>
+    </figure>
+
+  </main>
+
+  <footer class="foot">
+    <span>Dani Rueda</span>
+    <span><a href="mailto:daniruedaart@gmail.com">daniruedaart@gmail.com</a></span>
+    <span class="end">DC Metro Area</span>
+  </footer>
+
+</div>
+</body>
+</html>
